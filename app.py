@@ -34,6 +34,7 @@ def delhi_channel_update():
             #x = requests.get(url, headers=headers)
             x = requests.get(url)
             data = x.json()
+            print(url)
             print(data)
             
             cnt2=1
