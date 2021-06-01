@@ -1,1 +1,1 @@
-web gunicorn cowindelhi:app
+worker: python3 cowindelhi.py
