@@ -1,1 +1,1 @@
-worker: python3 cowindelhi.py
+worker: python3 app.py
