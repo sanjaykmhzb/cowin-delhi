@@ -65,9 +65,10 @@ def delhi_channel_update():
         base_url = "https://api.telegram.org/bot1752190941:AAFDD_WZs_1XjsBgo_rhx5lZ4W6F0nrjOb8/sendMessage?chat_id=@COWIN_Delhi_Upd&text={0}".format(messageFor18)
         print("Response:",requests.get(base_url))
         print("No slot available for 18+")
-       
-print('...starting execution...')
-while True:
-    print('Delhi Update Started')
-    delhi_channel_update()
-    time.sleep(10)
+
+if __name__ == "__main__":        
+    print('...starting execution...')
+    while True:
+        print('Delhi Update Started')
+        delhi_channel_update()
+        time.sleep(10)
