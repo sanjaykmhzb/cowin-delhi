@@ -33,6 +33,7 @@ def delhi_channel_update():
             headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
             x = requests.get(url, headers=headers)
             data = x.json()
+            print(data)
             
             cnt2=1
             centre_detail_2 = ""        
