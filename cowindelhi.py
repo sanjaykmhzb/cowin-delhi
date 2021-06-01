@@ -9,6 +9,7 @@ Filters: 18+ and available_capacity_dose1 >1
 
 import requests
 import datetime
+import time
 
 theday = datetime.date.today()
 start = theday - datetime.timedelta(days=0)
@@ -53,14 +54,16 @@ if len(listOfAllCentresFor18) >0:
     messageFor18 = messageFor18 + "[18 to 44][1st Dose]\n"
     for mess in  listOfAllCentresFor18:
         messageFor18 = messageFor18 + mess +"\n"
-        messageFor18 = messageFor18 + "\n" 
-    
+        messageFor18 = messageFor18 + "\n"     
     base_url = "https://api.telegram.org/bot1752190941:AAFDD_WZs_1XjsBgo_rhx5lZ4W6F0nrjOb8/sendMessage?chat_id=@COWIN_Delhi_Upd&text={0}".format(messageFor18)
     print("Response:",requests.get(base_url))
     print("Message Sent for 18+!")
 else:
-     print("No slot available for 18+")
-     
-
-
+    messageFor18="No slot available for 18+"
+    base_url = "https://api.telegram.org/bot1752190941:AAFDD_WZs_1XjsBgo_rhx5lZ4W6F0nrjOb8/sendMessage?chat_id=@COWIN_Delhi_Upd&text={0}".format(messageFor18)
+    print("Response:",requests.get(base_url))
+    print("No slot available for 18+")
+        
+while True:
+    time.sleep(30)
 
