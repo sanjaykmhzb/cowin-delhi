@@ -29,7 +29,7 @@ def delhi_channel_update():
     for p in pinid:
         for d in dates:
             d1=str(d.strftime("%d-%m-%Y"))
-            url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode={0}&date={1}".format(p,d1)
+            url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={0}&date={1}".format(p,d1)
             headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
             x = requests.get(url, headers=headers)           
             data = x.json()
